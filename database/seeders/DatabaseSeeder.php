@@ -31,8 +31,8 @@ class DatabaseSeeder extends Seeder
         City::create(['country_id' => 1, 'name' => 'Gdańsk']);
         City::create(['country_id' => 1, 'name' => 'Wrocław']);
         City::create(['country_id' => 2, 'name' => 'London']);
-        City::create(['country_id' => 1, 'name' => 'Manchester']);
-        City::create(['country_id' => 1, 'name' => 'Liverpool']);
+        City::create(['country_id' => 2, 'name' => 'Manchester']);
+        City::create(['country_id' => 2, 'name' => 'Liverpool']);
 
         Tag::create(['name' => 'Laravel', 'slug' => 'laravel']);
         Tag::create(['name' => 'Vue JS', 'slug' => 'vue-js']);
