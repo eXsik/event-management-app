@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use phpDocumentor\Reflection\Types\Boolean;
 
 class Event extends Model
 {
@@ -60,5 +61,10 @@ class Event extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function hasTag($tag) : bool 
+    {
+        return $this->tags->contains($tag);
     }
 }
